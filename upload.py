@@ -206,7 +206,7 @@ if __name__ == '__main__':
         os.chdir('static')
         uploaded_files = special_upload(*os.listdir())
 
-        with open("wikipaths.csv", "w") as paths:
+        with open("../wikipaths.csv", "w") as paths:
             csvwriter = csv.writer(paths)
             csvwriter.writerows([[old, new] for old, new in uploaded_files.items()])
 
